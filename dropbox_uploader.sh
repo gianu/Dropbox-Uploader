@@ -21,6 +21,10 @@
 
 #Default configuration file
 CONFIG_FILE=~/.dropbox_uploader
+if [ ! -f $CONFIG_FILE ];
+then
+  CONFIG_FILE=/etc/dropbox_uploader/config
+fi
 
 #If you are experiencing problems establishing SSL connection with the DropBox
 #server, try to uncomment this option.
